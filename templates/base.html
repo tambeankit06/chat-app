@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <title>Chat</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.scss'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <style type="text/css">
+        .main {
+            min-height: 100vh;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'shared/header.html' %}
+    <div class="main">
+        {% block content%}
+
+        {% endblock content %}
+    </div>
+
+    {% include 'shared/footer.html' %}
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'bootstrap/js/jquery.min.js'%}"></script>
+</body>
+
+</html>
